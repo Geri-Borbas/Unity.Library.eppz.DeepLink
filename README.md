@@ -11,13 +11,13 @@
 // Just provide a lambda.
 DeepLink.OnOpenURL((string URL, string sourceApplicationBundleID) =>
 {
-	// Do something useful with `URL` (and `sourceApplicationBundleID`).
+    // Do something useful with `URL` (and `sourceApplicationBundleID`).
 });
 ```
 
 This action will be called even when the app has launched via deep linking (on the first `Update()` of the plugin class).
 
-> The deep link information will be picked up from both [`application:didFinishLaunchingWithOptions:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application?language=objc), [`application:openURL:options:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623112-application?preferredLanguage=occ) (iOS 9.0+) and [`application:openURL:sourceApplication:annotation:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623073-application?language=objc) (iOS 4.2 - iOS 9.0).
+> The deep link information will be picked up from both [`application:didFinishLaunchingWithOptions:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application?language=objc), [`application:openURL:options:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623112-application?preferredLanguage=occ) (iOS 9.0 and above) and [`application:openURL:sourceApplication:annotation:`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623073-application?language=objc) (from iOS 4.2 to iOS 9.0).
 
 
 ## License
