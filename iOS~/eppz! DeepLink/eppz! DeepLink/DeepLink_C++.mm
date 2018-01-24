@@ -23,10 +23,10 @@ extern "C"
     { return [[DeepLink instance] reset]; }
     
     const char* EPPZ_DeepLink_GetURL()
-    { return UnityStringFromNSString([[DeepLink instance] URL]); }
+    { return EPPZ_DeepLink_UnityStringFromNSString([[DeepLink instance] URL]); }
     
     const char* EPPZ_DeepLink_GetSourceApplication()
-    { return UnityStringFromNSString([[DeepLink instance] sourceAppliaction]); }
+    { return EPPZ_DeepLink_UnityStringFromNSString([[DeepLink instance] sourceAppliaction]); }
     
     
 }

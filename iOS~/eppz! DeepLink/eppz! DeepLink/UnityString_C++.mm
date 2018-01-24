@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 
 
-const char* UnityStringFromNSString(NSString* string)
+const char* EPPZ_DeepLink_UnityStringFromNSString(NSString* string)
 {
     const char* cString = string.UTF8String;
     char* _unityString = (char*)malloc(strlen(cString) + 1);
@@ -22,7 +22,7 @@ const char* UnityStringFromNSString(NSString* string)
     return _unityString;
 }
 
-NSString* NSStringFromUnityString(const char* unityString_)
+NSString* EPPZ_DeepLink_NSStringFromUnityString(const char* unityString_)
 {
     if (unityString_ == nil) return [NSString new];
     return [NSString stringWithUTF8String:unityString_];

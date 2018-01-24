@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		552856361EBE63190043CD02 /* Override.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856351EBE63190043CD02 /* Override.h */; };
 		5528563F1EBE652C0043CD02 /* eppz! DeepLink.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* eppz! DeepLink.a */; };
+		553EE46720180A36000E90CB /* eppz! DeepLink.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* eppz! DeepLink.a */; };
 		554BE3B71EBE779F00EB767C /* UnityString_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554BE3B61EBE779F00EB767C /* UnityString_C++.mm */; };
 		55526F331EBFF1D300A02158 /* Override.m in Sources */ = {isa = PBXBuildFile; fileRef = 552856371EBE63190043CD02 /* Override.m */; };
 		559CA6E91EC27F1800492DC3 /* DeepLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 559CA6E81EC27F1800492DC3 /* DeepLink.m */; };
@@ -30,11 +31,21 @@
 		};
 		5528563E1EBE64F50043CD02 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "~/Projects/Unity/Test/eppz/Assets/Plugins/eppz!/DeepLink";
 			dstSubfolderSpec = 0;
 			files = (
 				5528563F1EBE652C0043CD02 /* eppz! DeepLink.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553EE46620180A32000E90CB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "~/Projects/Unity/Test/eppz/Builds/iOS/DeepLink/Libraries/Plugins/eppz!/DeepLink";
+			dstSubfolderSpec = 0;
+			files = (
+				553EE46720180A36000E90CB /* eppz! DeepLink.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +128,7 @@
 				5528562F1EBE63180043CD02 /* Frameworks */,
 				552856301EBE63180043CD02 /* CopyFiles */,
 				5528563E1EBE64F50043CD02 /* CopyFiles */,
+				553EE46620180A32000E90CB /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -261,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = "";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

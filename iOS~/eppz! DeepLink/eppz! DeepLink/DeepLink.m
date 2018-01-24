@@ -14,7 +14,7 @@
 #import "DeepLink.h"
 
 
-__strong DeepLink *_instance;
+__strong DeepLink *_EPPZ_DeepLink_instance;
 
 
 @implementation DeepLink
@@ -23,11 +23,11 @@ __strong DeepLink *_instance;
 +(void)load
 {
     NSLog(@"[DeepLink load]");
-    _instance = [DeepLink new];
+    _EPPZ_DeepLink_instance = [DeepLink new];
 }
 
 +(DeepLink*)instance
-{ return _instance; }
+{ return _EPPZ_DeepLink_instance; }
 
 -(instancetype)init
 {

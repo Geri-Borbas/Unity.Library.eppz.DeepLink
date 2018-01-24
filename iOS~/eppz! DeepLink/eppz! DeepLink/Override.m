@@ -19,13 +19,13 @@
 
 +(void)load
 {
-    NSLog(@"[Override_iOS load]");
+    NSLog(@"[Override load]");
     [self swizzle];
 }
 
 +(void)swizzle
 {
-    NSLog(@"[Override_iOS swizzle]");
+    NSLog(@"[Override swizzle]");
     [self replaceAppDelegateMethod:@selector(application:didFinishLaunchingWithOptions:)
                          fromClass:OverrideAppDelegate.class
                   savingOriginalTo:@selector(_original_saved_by_Override_application:didFinishLaunchingWithOptions:)];
