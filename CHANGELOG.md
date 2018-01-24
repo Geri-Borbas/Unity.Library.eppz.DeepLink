@@ -1,6 +1,10 @@
 # eppz.DeepLink
 
 
+* 0.0.4
+
+	+ Added sandbox features for Editor testing
+
 * 0.0.3
 
 	+ Added `-ObjC` linker flag (`BuildPostProcessor`)

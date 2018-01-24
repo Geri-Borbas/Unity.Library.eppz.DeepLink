@@ -29,8 +29,6 @@ namespace EPPZ.DeepLink.Editor
 		[PostProcessBuildAttribute(1)]
 		public static void OnPostProcessBuild(BuildTarget target, string path)
 		{
-			Debug.Log("EPPZ.DeepLink.Editor.BuildPostProcessor.OnPostProcessBuild()");
-
 			if (target == BuildTarget.iOS)
 			{
 				// Read.
@@ -39,9 +37,6 @@ namespace EPPZ.DeepLink.Editor
 				project.ReadFromString(File.ReadAllText(projectPath));
 				string targetName = PBXProject.GetUnityTargetName();
 				string projectTarget = project.TargetGuidByName(targetName);
-
-				Debug.Log("EPPZ.DeepLink.Editor.BuildPostProcessor.OnPostProcessBuild.targetName: `"+targetName+"`");
-				Debug.Log("EPPZ.DeepLink.Editor.BuildPostProcessor.OnPostProcessBuild.path: `"+path+"`");				
 
 				AddFrameworks(project, projectTarget);
 

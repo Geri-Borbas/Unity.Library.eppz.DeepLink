@@ -39,6 +39,22 @@ namespace EPPZ.DeepLink
 		Action<string, string> callback;
 
 
+	#region Sandbox
+
+		[System.Serializable]
+		public class Sandbox
+		{
+			public string URL;
+			public string sourceAppID;
+		}
+		public Sandbox sandbox;
+
+		public static Sandbox GetSandbox()
+		{ return _instance.sandbox; }
+
+	#endregion
+
+
 	#region Features
 
 		public static void OnOpenURL(Action<string, string> callback)
@@ -51,6 +67,12 @@ namespace EPPZ.DeepLink
 		{
 			if (plugin.GetURL() == "") return;
 			if (callback == null) return;
+			InvokeCallback();
+		}
+
+		[ContextMenu("InvokeCallback()")]
+		void InvokeCallback()
+		{
 			callback(plugin.GetURL(), plugin.GetSourceApplication());
 			plugin.Reset();
 		}

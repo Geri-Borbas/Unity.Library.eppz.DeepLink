@@ -15,5 +15,25 @@ namespace EPPZ.DeepLink.Plugin
 
 
 	public class DeepLink_Editor : DeepLink
-	{ }
+	{
+		
+
+	#region Features
+
+		public override void Reset()
+		{
+			EPPZ.DeepLink.DeepLink.GetSandbox().URL = "";
+			EPPZ.DeepLink.DeepLink.GetSandbox().sourceAppID = "";
+		}
+
+		public override string GetURL()
+		{ return EPPZ.DeepLink.DeepLink.GetSandbox().URL; }
+
+		public override string GetSourceApplication()
+		{ return EPPZ.DeepLink.DeepLink.GetSandbox().sourceAppID; }
+
+	#endregion
+
+
+	}
 }
