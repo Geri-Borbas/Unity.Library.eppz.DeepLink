@@ -1,6 +1,10 @@
 # eppz.DeepLink
 
 
+* 0.0.5
+
+	+ Build post processing script only compiles when iOS is targeted
+
 * 0.0.4
 
 	+ Added sandbox features for Editor testing

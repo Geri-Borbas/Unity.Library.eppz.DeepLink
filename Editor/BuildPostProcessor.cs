@@ -11,6 +11,7 @@
 // OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#if UNITY_IOS
 using System.IO;
 using UnityEngine;
 using UnityEditor;
@@ -52,3 +53,4 @@ namespace EPPZ.DeepLink.Editor
 		}
 	}
 }
+#endif
